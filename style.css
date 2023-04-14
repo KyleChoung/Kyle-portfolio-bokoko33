@@ -875,6 +875,10 @@ dialog::backdrop {
   backdrop-filter: blur(10px);
 }
 
+dialog[open] {
+    display: block;
+}
+
 .wrong{
   position: absolute;
   right:25px;
