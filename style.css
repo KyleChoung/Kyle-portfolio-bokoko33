@@ -869,14 +869,11 @@ dialog{
   overflow:auto;
   /*background-color: var(--color-background);*/
   opacity: 0.8;
+  display: none;
 }
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.71);
   backdrop-filter: blur(10px);
-}
-
-dialog[open] {
-    display: block;
 }
 
 .wrong{
