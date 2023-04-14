@@ -53,21 +53,21 @@ export default class Room{
         this.actualiphone.rotation.set(-39.28,0,-20)
         this.actualiphone.scale.set(100,100,100)
 
-        //video
-        let video = document.getElementById("video");
-        let videoTexture = new THREE.VideoTexture(video);
+         //video
+        const videoElement = document.createElement('video');
+        videoElement.src="/textures/code.mp4";
+        videoElement.crossOrigin = 'anonymous';
+        videoElement.loop = true;
+        videoElement.muted = true;
+        videoElement.play();
 
-        // videoTexture.minFilter = THREE.LinearFilter;
-        // videoTexture.magFilter = THREE.LinearFilter;
-
-        var movieMaterial = new THREE.MeshBasicMaterial({
-            map: videoTexture,
-            side: THREE.FrontSide,
-            toneMapped: false
-        })
+        const texture = new THREE.VideoTexture(videoElement);
+        var material = new THREE.MeshBasicMaterial({
+            map: texture
+        });
 
         var videogeometry = new THREE.PlaneGeometry(59.5, 34);
-        this.videomesh = new THREE.Mesh(videogeometry,movieMaterial);
+        this.videomesh = new THREE.Mesh(videogeometry,material);
         this.videomesh.position.set(-99,110.5,-151.1)
         this.videomesh.rotation.set(-0.092,0,0);
 
