@@ -92,6 +92,7 @@ class Carousel {
         });
         //creat iframe
         let infoModal=document.querySelector("#infoModal");
+        let mobiledialog = document.getElementById("infoModal")
         let source = document.getElementById('videosource')
         let close=document.querySelector("#close");
         let video = document.getElementById("dialogVideo");
@@ -112,9 +113,11 @@ class Carousel {
 
             // Log the clicked element in the console
             infoModal.showModal();
+            mobiledialog.style.display = "block";
         }, false);
         close.addEventListener("click", function(){
             infoModal.close();
+            mobiledialog.style.display = "none";
             video.pause();
         })
 
