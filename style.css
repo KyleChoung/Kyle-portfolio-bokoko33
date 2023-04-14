@@ -107,7 +107,6 @@ h1,section,p,span,svg{
   }
 }
 
-
 /* Experience ------------------------------------------*/
 
 .experience{
@@ -1003,8 +1002,9 @@ dialog::backdrop {
     width: 10px;
     height: 10px;
     right:10px;
-    top:10px; 
-  }
-  .loader{
+    top:10px;  }
+}
+
+.loader{
   left: calc(50vw - 90px);
 }
