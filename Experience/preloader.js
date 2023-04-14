@@ -18,11 +18,15 @@ export default class preloader extends EventEmitter{
             this.device = device;
         });
 
-        this.world.on("worldready", () => {
+       this.world.on("worldready", () => {
             this.setAssets();
             this.playIntro();
             this.removeEventListeners();
-            this.playSecondIntro()
+            setTimeout(() => {
+                var pre = document.getElementById("loder");
+                pre.style.display = "none"
+                this.secondIntro();
+            },1500)
         });
     }
 
